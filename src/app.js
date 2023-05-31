@@ -16,10 +16,40 @@ window.onload = function() {
 
   var ext = [".com", ".net", ".us", ".org", ".io"];
 
-  for (let p = 0; p < pronoun.length; p++) {
-    for (let a = 0; a < adj.length; a++) {
-      for (let n = 0; n < noun.length; n++) {
-        for (let e = 0; e < ext.length; e++) {
+  // for (let p = 0; p < pronoun.length; p++) {
+  //   for (let a = 0; a < adj.length; a++) {
+  //     for (let n = 0; n < noun.length; n++) {
+  //       for (let e = 0; e < ext.length; e++) {
+  //         // ------EXTENSION SIN PUNTO------
+
+  //         let EditExt = ext[e].substring(1, ext[e].length);
+
+  //         // ------NOUN RECORTADO--------
+
+  //         let EditNoun = noun[n].substring(
+  //           noun[n].length - ext[e].length + 1,
+  //           noun[n].length
+  //         );
+
+  //         // -------CONDICIONAL----------
+
+  //         if (EditExt === EditNoun) {
+  //           console.log(
+  //             "WHAAATT??!! --->  " +
+  //               noun[n].substring(0, noun[n].length - ext[e].length + 1) +
+  //               ext[e]
+  //           );
+  //         }
+  //         console.log(pronoun[p] + adj[a] + noun[n] + ext[e]);
+  //       }
+  //     }
+  //   }
+  // }
+
+  for (el of pronoun) {
+    for (el of adj) {
+      for (el of noun) {
+        for (el of ext) {
           // ------EXTENSION SIN PUNTO------
 
           let EditExt = ext[e].substring(1, ext[e].length);
@@ -39,7 +69,8 @@ window.onload = function() {
                 noun[n].substring(0, noun[n].length - ext[e].length + 1) +
                 ext[e]
             );
-          } else console.log(pronoun[p] + adj[a] + noun[n] + ext[e]);
+          }
+          console.log(pronoun[p] + adj[a] + noun[n] + ext[e]);
         }
       }
     }
